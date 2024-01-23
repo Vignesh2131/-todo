@@ -138,7 +138,7 @@ function App() {
       <div className="mx-auto max-w-lg justify-center items-center my-4">
         <div className="flex justify-around items-center px-2">
           <button
-            className={`border-b-4 p-1 rounded-sm md:w-32 hover:border-violet-400 ${
+            className={`border-b-4 p-1 rounded-sm md:w-36 hover:border-violet-400 ${
               allTasksActive ? "border-violet-400" : ""
             }`}
             onClick={() => showAllTasks("allTodos")}
@@ -152,7 +152,7 @@ function App() {
             }`}
           </button>
           <button
-            className={`border-b-4 p-1 rounded-sm md:w-32 hover:border-amber-400 ${
+            className={`border-b-4 p-1 rounded-sm md:w-36 hover:border-amber-400 ${
               allProcessTasks ? "border-amber-400" : ""
             }`}
             onClick={() => {
@@ -168,7 +168,7 @@ function App() {
             }`}
           </button>
           <button
-            className={`border-b-4 p-1 rounded-sm md:w-32 hover:border-fuchsia-400 ${
+            className={`border-b-4 p-1 rounded-sm md:w-40 hover:border-fuchsia-400 ${
               allCompletedTasks ? "border-fuchsia-400" : ""
             }`}
             onClick={() => {
