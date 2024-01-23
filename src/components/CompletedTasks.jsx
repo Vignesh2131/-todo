@@ -1,32 +1,24 @@
 import PropTypes from 'prop-types'
-import { v4 as uuidv4 } from "uuid";
+
 const CompletedTasks = ({ todos, deleteTask }) => {
   return (
-    <div className="mx-auto flex-col max-w-lg items-center justify-center m-2">
-          <h2 className="text-lg text-center text-semiBold">Completed Tasks</h2>
+    <div className="mx-auto flex-col max-w-lg justify-center m-4">
           <ol>
-            {todos.length === 0 ? <h1 className='text-center'>You have done nothing</h1> : ""}
+            {todos.length === 0 ? <h1>You have done nothing</h1> : ""}
             {todos?.map((todo) => {
               return (
                 <li
-                  className="flex justify-between items-center gap-4 m-2 bg-fuchsia-400 p-2 px-6 rounded-md "
-                  key={uuidv4()}
+                  className="flex justify-between items-center gap-4  bg-fuchsia-400 m-2 p-2 px-6 rounded-md "
+                  key={todo.id}
                 >
                   <div className="flex-1">
                     <span>{todo.task}</span>
-                    <div className="text-sm font-semibold italic">
-                      Completed at{" "}
-                      {todo.date_added[0] > 12
-                        ? todo.date_added[0] - 12
-                        : todo.date_added[0]}
-                      :{todo.date_added[1]}{" "}
-                      {todo.date_added[0] > 12 ? "pm" : "am"}
-                    </div>
+                  
                   </div>
 
                   <div className="p-1">
                     <button
-                      className="rounded-sm bg-white"
+                      className="rounded-sm hover:scale-125"
                       onClick={() => deleteTask(todo.id)}
                     >
                       <img width={30} height={30} src="/del.svg" alt="btn" />
